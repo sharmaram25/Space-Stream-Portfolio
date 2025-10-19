@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 255 255 255;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  @apply bg-white text-neutral font-inter dark:bg-navy; 
+  background-image: radial-gradient(700px 240px at 12% 12%, rgba(0,123,255,0.10), transparent),
+    radial-gradient(700px 240px at 88% 18%, rgba(0,123,255,0.08), transparent),
+    radial-gradient(700px 240px at 26% 88%, rgba(0,123,255,0.09), transparent);
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/20 backdrop-blur-md border border-white/30 shadow-lg rounded-xl dark:bg-white/10 dark:border-white/10;
+  }
+  .btn {
+    @apply px-6 py-3 rounded-lg font-medium text-white bg-accent hover:bg-accent/80 transition;
+  }
+  .btn-neutral {
+    @apply px-6 py-3 rounded-lg font-medium text-white bg-neutral hover:bg-neutral/80 transition;
+  }
+  .section {
+    @apply max-w-6xl mx-auto px-6 md:px-8;
+  }
+  .h1 {
+    @apply text-3xl md:text-5xl font-extrabold tracking-tight text-neutral/90;
+  }
+  .h2 {
+    @apply text-2xl md:text-3xl font-semibold text-neutral/90;
+  }
+  .muted {
+    @apply text-neutral/80;
+  }
+  .chip {
+    @apply glass px-3 py-1 rounded-lg text-xs text-neutral/90 dark:text-white;
+  }
+}
+
+html { scroll-behavior: smooth; }
+.dot-grid::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 1px 1px, rgba(90,108,125,0.25) 1px, transparent 0);
+  background-size: 16px 16px;
+  pointer-events: none;
+  opacity: 0.4;
+}
