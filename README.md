@@ -18,6 +18,13 @@ Live demo: https://space-stream-portfolio.netlify.app/
 - Framer Motion
 - three.js + react-three-fiber + postprocessing
 
+## Screenshots
+These screenshots reflect the current look-and-feel.
+
+![Home Hero](docs/screenshots/hero-home.png)
+![Projects Grid](docs/screenshots/projects.png)
+![Experience Timeline](docs/screenshots/experience.png)
+
 ## Getting Started
 1) Install dependencies
 	npm install
